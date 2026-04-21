@@ -16,7 +16,7 @@ export const projects: Project[] = [
       'Comprehensive audit logging for all stock movements',
     ],
     focus: 'Full-Stack Development, Real-time Systems, Analytics',
-    image: '/images/projects/aesamonte/ss1.png',
+    image: '/public/images/projects/aesamonte/ss1.png',
     images: [
       '/public/images/projects/aesamonte/ss1.png',
       '/public/images/projects/aesamonte/ss2.png',
@@ -39,7 +39,7 @@ export const projects: Project[] = [
       'Multi-counter support with live queue visibility',
     ],
     focus: 'Queue Optimization, Real-time Systems, Analytics',
-    image: '/images/projects/smartqueue/ss1.png',
+    image: '/public/images/projects/smartqueue/ss1.png',
     images: [
       '/public/images/projects/smartqueue/ss1.png',
       '/public/images/projects/smartqueue/ss2.png',
@@ -62,7 +62,7 @@ export const projects: Project[] = [
       'Multiple difficulty levels for all skill ranges',
     ],
     focus: 'Game Development, Web Audio, Real-time Graphics',
-    image: '/images/projects/algorhythm/ss1.png',
+    image: '/public/images/projects/algorhythm/ss1.png',
     images: [
       '/public/images/projects/algorhythm/ss1.png',
       '/public/images/projects/algorhythm/ss2.png',
