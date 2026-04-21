@@ -1,0 +1,19 @@
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+  text-align: center;
+  padding: 2.5rem var(--gutter-desktop);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer p {
+  font-family: var(--font);
+  font-size: 0.825rem;
+  color: var(--text-2);
+  line-height: 1.5;
+}

@@ -1,0 +1,212 @@
+/* ── Section ─────────────────────────────── */
+.section {
+  background-color: var(--bg);
+  padding: 7rem var(--gutter-desktop);
+}
+
+.inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.title {
+  font-family: var(--mono);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ════════════════════════════════════════════
+   ENTITY 1 — Showcase Carousel
+════════════════════════════════════════════ */
+
+.showcaseWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Image frame — aspect ratio matches the widest screenshot (1918×867 ≈ 16:7) */
+.frame {
+  position: relative;
+  flex: 1;
+  aspect-ratio: 1918 / 867;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #0d0d0d;
+  border: 1px solid var(--border-2);
+}
+
+/* Opacity-fade slides */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease);
+  pointer-events: none;
+}
+
+.slideActive {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slideImage {
+  object-fit: contain;
+}
+
+/* Project name label — bottom-left of frame */
+.slideLabel {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.25rem;
+  font-family: var(--font);
+  font-size: var(--fs-ui);
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(10, 10, 10, 0.65);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Slide counter — top-right */
+.counter {
+  position: absolute;
+  top: 0.875rem;
+  right: 1rem;
+  font-family: var(--font);
+  font-size: 0.875rem;
+  color: rgba(230, 230, 250, 0.55);
+  background: rgba(10, 10, 10, 0.5);
+  padding: 0.15rem 0.55rem;
+  border-radius: 99px;
+  z-index: 10;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+/* Prev / Next arrows */
+.navBtn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 26, 26, 0.85);
+  border: 1px solid rgba(191, 64, 191, 0.3);
+  border-radius: 50%;
+  color: var(--mg);
+  cursor: pointer;
+  transition: background var(--transition-fast),
+              border-color var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+.navBtn:hover {
+  background: rgba(191, 64, 191, 0.16);
+  border-color: var(--mg);
+  transform: scale(1.1);
+}
+
+.navBtn:focus-visible {
+  outline: 2px solid var(--mg);
+  outline-offset: 3px;
+}
+
+/* Dots — orchid rectangle active, grey square inactive */
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background var(--transition-fast),
+              width var(--transition-fast),
+              border-radius var(--transition-fast);
+}
+
+.dot:hover {
+  background: rgba(191, 64, 191, 0.45);
+}
+
+.dotActive {
+  width: 24px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--mg);
+}
+
+.dot:focus-visible {
+  outline: 2px solid var(--mg);
+  outline-offset: 3px;
+}
+
+/* ════════════════════════════════════════════
+   ENTITY 2 — Folder Card Grid
+════════════════════════════════════════════ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 1024px) {
+  .section {
+    padding: 5rem var(--gutter-tablet);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 4rem var(--gutter-mobile);
+  }
+
+  .inner {
+    gap: 3rem;
+  }
+
+  .navBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

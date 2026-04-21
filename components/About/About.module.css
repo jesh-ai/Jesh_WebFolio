@@ -1,0 +1,185 @@
+.section {
+  background-color: var(--bg);
+  padding: 7rem var(--gutter-desktop);
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* ── Section header ─────────────────────── */
+
+.sectionTitle {
+  font-family: var(--mono);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+/* ── Left — 60% text column ─────────────── */
+
+.textCol {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Paragraphs */
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.prose p {
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  color: var(--text-2);
+  line-height: 1.8;
+}
+
+/* Inline emphasis */
+.bold {
+  font-weight: 700;
+  color: var(--text);
+  font-style: normal;
+}
+
+.highlight {
+  color: var(--mg);
+  font-weight: 500;
+}
+
+/* ── Tech grid ──────────────────────────── */
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0.5rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  color: var(--text-2);
+  transition: color var(--transition-fast);
+}
+
+.techItem:hover {
+  color: var(--text);
+}
+
+.bullet {
+  color: var(--mg);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ── Right — 40% image column ───────────── */
+
+.imageCol {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  padding-top: 3.5rem; /* aligns roughly with text body */
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  border-radius: var(--radius-md);
+  overflow: visible;
+  transition: transform 0.35s var(--ease);
+}
+
+.imageWrapper:hover {
+  transform: translateY(-7px);
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-2);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.35),
+    0 12px 32px rgba(0, 0, 0, 0.25);
+  display: block;
+  transition: box-shadow 0.35s var(--ease);
+}
+
+.imageWrapper:hover .photo {
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    0 20px 48px rgba(0, 0, 0, 0.30),
+    0 0 0 1px rgba(192, 38, 211, 0.25);
+}
+
+/* ── Responsive ─────────────────────────── */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 5rem var(--gutter-tablet);
+  }
+
+  .inner {
+    gap: 3rem;
+  }
+
+  .textCol {
+    flex: 0 0 58%;
+  }
+
+  .imageCol {
+    flex: 1;
+    padding-top: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .textCol,
+  .imageCol {
+    flex: unset;
+    width: 100%;
+  }
+
+  .imageCol {
+    padding-top: 0;
+  }
+
+  .imageWrapper {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 4rem var(--gutter-mobile);
+  }
+}

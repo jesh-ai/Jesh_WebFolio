@@ -1,0 +1,135 @@
+/* ============================================
+   Hero — centered column, full viewport
+   ============================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.75rem;
+  padding: calc(var(--nav-height) + 3rem) var(--gutter-desktop) 4rem;
+  background-color: var(--bg);
+}
+
+/* ── Heading ────────────────────────────── */
+
+.title {
+  font-family: var(--font);
+  font-size: clamp(3rem, 8vw, 86px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: var(--text);
+  margin: 0;
+}
+
+.accent {
+  color: var(--mg);
+}
+
+/* ── Typewriter subtitle ────────────────── */
+
+.subtitle {
+  font-family: var(--font);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--text-2);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/*
+ * The cycling word + cursor share a baseline via inline-flex.
+ * min-width keeps the line from collapsing while the word is empty.
+ */
+.typewriter {
+  display: inline-flex;
+  align-items: center;
+  color: var(--mg);
+  min-width: 2px; /* never fully collapses */
+}
+
+/* Blinking I-beam cursor */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--mg);
+  margin-left: 1px;
+  vertical-align: -0.05em;
+  animation: blink 0.85s step-end infinite;
+  flex-shrink: 0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Description ────────────────────────── */
+
+.desc {
+  font-family: var(--font);
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  color: var(--text-2);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0;
+}
+
+/* ── CTA button ─────────────────────────── */
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--mg);
+  background: transparent;
+  border: 1px solid var(--mg);
+  padding: 10px 28px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition: background-color var(--transition-fast),
+              color          var(--transition-fast),
+              box-shadow     var(--transition-fast);
+}
+
+.cta:hover {
+  background-color: var(--mg);
+  color: #ffffff;
+  box-shadow: var(--mg-shadow);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+  .hero {
+    gap: 1.5rem;
+    padding: calc(var(--nav-height) + 2rem) var(--gutter-tablet) 3rem;
+  }
+
+  .title {
+    letter-spacing: -1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: calc(var(--nav-height) + 1.5rem) var(--gutter-mobile) 2.5rem;
+    gap: 1.25rem;
+  }
+
+  .subtitle {
+    /* wrap gracefully on small screens */
+    max-width: 320px;
+  }
+}
