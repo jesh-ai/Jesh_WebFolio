@@ -18,9 +18,9 @@ export const projects: Project[] = [
     focus: 'Full-Stack Development, Real-time Systems, Analytics',
     image: '/images/projects/aesamonte/ss1.png',
     images: [
-      '/images/projects/aesamonte/ss1.png',
-      '/images/projects/aesamonte/ss2.png',
-      '/images/projects/aesamonte/ss3.png',
+      '/public/images/projects/aesamonte/ss1.png',
+      '/public/images/projects/aesamonte/ss2.png',
+      '/public/images/projects/aesamonte/ss3.png',
     ],
     github: 'https://github.com/jesh-ai/AESamonteSystem',  
 },
@@ -41,9 +41,9 @@ export const projects: Project[] = [
     focus: 'Queue Optimization, Real-time Systems, Analytics',
     image: '/images/projects/smartqueue/ss1.png',
     images: [
-      '/images/projects/smartqueue/ss1.png',
-      '/images/projects/smartqueue/ss2.png',
-      '/images/projects/smartqueue/ss3.png',
+      '/public/images/projects/smartqueue/ss1.png',
+      '/public/images/projects/smartqueue/ss2.png',
+      '/public/images/projects/smartqueue/ss3.png',
     ],
     github: 'https://github.com/IJMPLM/Smart-Multi-Institute-Queuing-System',
   },
@@ -64,9 +64,9 @@ export const projects: Project[] = [
     focus: 'Game Development, Web Audio, Real-time Graphics',
     image: '/images/projects/algorhythm/ss1.png',
     images: [
-      '/images/projects/algorhythm/ss1.png',
-      '/images/projects/algorhythm/ss2.png',
-      '/images/projects/algorhythm/ss3.png',
+      '/public/images/projects/algorhythm/ss1.png',
+      '/public/images/projects/algorhythm/ss2.png',
+      '/public/images/projects/algorhythm/ss3.png',
     ],
   },
 ];

@@ -62,7 +62,7 @@ export default function About() {
         <div className={styles.imageCol}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/images/profile/mulleno_profile.jpg"
+              src="/public/images/profile/mulleno_profile.jpg"
               alt="Jeshaiah Mae Mulleno"
               width={340}
               height={340}
