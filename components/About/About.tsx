@@ -67,6 +67,7 @@ export default function About() {
               width={340}
               height={340}
               className={styles.photo}
+              priority
             />
           </div>
         </div>

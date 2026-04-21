@@ -2,11 +2,12 @@
 const nextConfig = {
   output: 'export',
   basePath: '/Jesh_WebFolio',
-  reactStrictMode: true,
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
     unoptimized: true,
   },
+  reactStrictMode: true,
+  swcMinify: true,
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 };
 
 module.exports = nextConfig;
