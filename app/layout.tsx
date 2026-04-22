@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'Python',
   ],
   icons: {
-    icon: '/Jesh_WebFolio/images/icons/Calcifer.gif',
+    icon: '/images/icons/Calcifer.gif',
   },
   authors: [{ name: 'Jeshaiah' }],
 };
