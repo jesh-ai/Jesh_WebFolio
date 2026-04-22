@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     'Next.js',
     'Python',
   ],
+  icons: {
+    icon: '/Jesh_WebFolio/images/icons/Calcifer.gif',
+  },
   authors: [{ name: 'Jeshaiah' }],
 };
 
