@@ -4,14 +4,14 @@ import styles from './About.module.css';
 const TECH: string[] = [
   'Python',
   'HTML',
-  'CSS',
+  'C',
   'JavaScript',
   'Java',
   'C++',
   'React',
   'Next.js',
   'Git',
-  'Figma',
+  'TypeScript',
   'Vue.js',
   'Tailwind CSS',
 ];
