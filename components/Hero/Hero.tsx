@@ -4,7 +4,18 @@ import { useState, useEffect } from 'react';
 import PixelatedCircle from './PixelatedCircle';
 import styles from './Hero.module.css';
 
-const STACK = ['TypeScript.', 'Next.js.', 'Python.', 'C#.'];
+const STACK = ['Python',
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'Java',
+  'C++',
+  'React',
+  'Next.js',
+  'Git',
+  'Figma',
+  'Vue.js',
+  'Tailwind CSS',];
 
 const TYPING_MS   = 80;
 const DELETING_MS = 45;
